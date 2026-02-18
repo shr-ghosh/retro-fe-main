@@ -1,0 +1,48 @@
+{
+  "name": "aptos-gamble",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@apollo/client": "^3.13.1",
+    "@aptos-labs/ts-sdk": "^1.35.0",
+    "@aptos-labs/wallet-adapter-react": "^4.1.0",
+    "@dnd-kit/core": "^6.3.1",
+    "@mdx-js/loader": "^3.1.0",
+    "@mdx-js/react": "^3.1.0",
+    "@next/mdx": "^15.2.1",
+    "@next/third-parties": "^15.2.1",
+    "@react-hook/window-size": "^3.1.1",
+    "framer-motion": "^12.4.10",
+    "graphql": "^16.10.0",
+    "matter-js": "^0.20.0",
+    "next": "15.2.1",
+    "petra-plugin-wallet-adapter": "^0.4.5",
+    "react": "^19",
+    "react-dom": "^19",
+    "react-fast-marquee": "^1.6.5",
+    "react-icons": "^5.5.0",
+    "react-spinners": "^0.15.0",
+    "rehype-raw": "^7.0.0",
+    "swiper": "^11.2.5",
+    "zod": "^3.24.2",
+    "zustand": "^5.0.3"
+  },
+  "devDependencies": {
+    "@types/node": "^22",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "@types/matter-js": "^0.19.8",
+    "@types/mdx": "^2.0.13",
+    "eslint": "^9",
+    "eslint-config-next": "15.2.1",
+    "postcss": "^8",
+    "tailwindcss": "^4.0.10",
+    "typescript": "^5"
+  }
+}

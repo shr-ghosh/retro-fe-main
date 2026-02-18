@@ -1,0 +1,171 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-primary: #080808;
+  --color-primary-light: #121418;
+  --color-primary-lighter: #24262a;
+  --color-secondary: #886cff;
+  --color-secondary-light: #a08aff;
+  --color-secondary-lighter: #b8a8ff;
+}
+
+/*
+  The default border color has changed to `currentColor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
+}
+
+@utility list-circle {
+  list-style-type: circle;
+}
+
+@utility list-square {
+  list-style-type: square;
+}
+
+@layer utilities {
+  * {
+    scroll-behavior: smooth;
+  }
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  input[type='number'] {
+    -moz-appearance: textfield;
+  }
+}
+
+@layer components {
+  body {
+    @apply overflow-hidden text-white;
+  }
+
+  main {
+    @apply p-4 lg:p-6 space-y-4 lg:space-y-8 min-h-[50vh] md:min-h-[80vh];
+  }
+
+  section {
+    @apply space-y-3 lg:space-y-4 relative m-0;
+  }
+
+  button {
+    @apply p-2 px-4 text-white bg-secondary hover:bg-secondary-light rounded-sm shadow-sm transition text-sm;
+  }
+
+  label {
+    @apply text-sm text-gray-500 select-none;
+  }
+
+  div {
+    user-select: none;
+  }
+
+  h1 {
+    @apply text-2xl md:text-2xl font-semibold;
+  }
+
+  h2 {
+    @apply text-xl md:text-xl font-semibold;
+  }
+
+  h3 {
+    @apply text-lg md:text-lg font-semibold;
+  }
+
+  h4 {
+    @apply text-base md:text-base font-semibold;
+  }
+
+  h5 {
+    @apply text-sm md:text-sm font-semibold;
+  }
+
+  p {
+    @apply text-xs md:text-sm text-slate-500 text-justify md:text-left;
+  }
+
+  input {
+    @apply w-full outline-hidden border text-sm border-gray-800 p-2 rounded-sm bg-transparent;
+  }
+
+  label {
+    @apply text-xs md:text-sm text-gray-500 select-none font-extralight;
+  }
+
+  ul {
+    @apply list-disc list-inside;
+  }
+
+  ul ul {
+    @apply list-circle ml-4 md:ml-6 lg:ml-8;
+  }
+
+  ul ul ul {
+    @apply list-square ml-4 md:ml-6 lg:ml-8;
+  }
+
+  li {
+    @apply mb-2;
+  }
+}
+
+footer > div,
+main > section, .nav-content {
+  @apply max-w-[1318px] m-auto;
+}
+
+.desktop-sidebar  {
+  @apply md:min-w-[230px] h-[calc(100vh-4.5rem)] max-w-[280px];
+}
+
+.sidebar-width {
+ @apply hidden md:block w-[18vw] max-w-[234px] p-4;
+}
+
+.claim-reward {
+  @apply bg-amber-500 hover:bg-amber-600; 
+}
+
+.bordered-text {
+  -webkit-text-fill-color: rgba(255, 255, 255, 0);
+  -webkit-text-stroke-width: 1.5px;
+  -webkit-text-stroke-color: #fff;
+  text-transform: uppercase;
+  overflow: hidden;
+}
+
+img {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-select: none;
+}
+
+.swiper {
+  @apply h-[180px] md:h-[200px] pt-2!;
+}
+
+.swiper-slide {
+  @apply flex items-center justify-center text-black object-cover;
+}
